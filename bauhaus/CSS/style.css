@@ -1,0 +1,300 @@
+/* 웹폰트 http://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap');
+body { font-family: 'Noto Sans KR', sans-serif; margin: 0; }
+.clear {clear:both; height:0; overflow:hidden;}
+/*   내비게이션    */
+nav ul {
+    list-style: none;
+}
+body header nav ul li a {line-height: 50px; font-size:15px; color:#fff; text-decoration:none;}
+body header{position:fixed; padding:7px 0px; background: #fff; box-shadow: 0 2px 2px rgba(0,0,0,.4); opacity: 70%; z-index: 2; }
+#menu-bar { margin: 30px; padding: 0;}
+body header nav ul li a { color: black; }
+/*   첫페이지    */
+#p1_text {
+    position: absolute;
+    display: inline-block;
+    width: 600px;
+    height: auto;
+    margin: 0 15px;
+    right: 0;
+    bottom: 20px;
+    
+}
+
+#modernism {
+    margin: 15px 15px;
+    font-size: 28px;
+    display: block;
+    text-align: right;
+    
+}
+#mod_space {
+    word-spacing: 1rem;
+    letter-spacing: 1rem;
+}
+#p1_content {
+    margin: 10px 15px;
+    font-size: 15px;
+    display: block;
+    text-align: justify;
+    letter-spacing: 0.09rem;
+    
+}
+/*   두번째페이지    */
+#second {
+    width: 1200px;
+    margin: 0 auto;
+} 
+.sec_div {
+    float: left;
+    width: 400px;
+    padding: 0px;
+}
+#sec_left {
+    padding: 0 15px;
+    text-align: right;
+}
+#sec_center{   padding: 0 15px;}
+#sec_right{    padding: 0 15px;}
+#sec_right img {
+    width :360px;
+    margin: 0 auto;
+}
+/*   세번째페이지    */
+#third_grey {
+    position: relative;
+    background-color: rgb(216, 216, 216);
+    height: 420px;
+    margin-top: 705px;
+    z-index: -1;
+}
+#third {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+.third_div {
+    float: left;
+    width: 600px;
+    padding: 0;
+}
+#third_left img {
+    width : 570px;
+    margin: 0 auto;
+    
+}
+#third_left { padding: 0 15px;}
+#third_right {
+    text-align: right;
+    padding: 138px 15px 0px 15px;
+}
+/*  네번째페이지    */
+
+#fourth {
+    position: relative;
+    width : 1200px;
+    margin: 0 auto;
+}
+.fourth_div {
+    float: left;
+    padding: 0;
+}
+#fourth_wihte_box {
+    position: absolute;
+    width: 570px;
+    height: 300px;
+    padding: 80px 15px 90px 15px;
+    background-color: rgba(255,255,255, 0.8);
+
+}
+#fourth_right {
+    margin-top: 210px;
+    float: right;
+    position: relative;
+    z-index: -1;
+    padding : 0 15px;
+}
+#fourth_right img {
+    width : 870px;
+    margin: 0 auto;
+}
+/* 다섯번째 페이지 */
+#fifth {
+    width: 1200px;
+    margin: 50px auto;
+}
+.fifth_div {
+    float: left;
+    width: 600px;
+    padding: 0;
+    margin-top: 120px
+}
+#fifth_left img {
+    width : 570px;
+    margin: 0 auto;
+    
+}
+#fifth_content {
+    width: 470px;
+    margin-right: 100px; 
+
+}
+#fifth_left { padding: 0 15px;}
+#fifth_right {
+    padding: 0 15px;
+    float: right;
+    margin-bottom: 40px;
+}
+/* 여섯번째 페이지 */
+#sixth {
+    width: 1200px;
+    margin: 50px auto;
+}
+.sixth_div {
+    float: left;
+    width: 600px;
+    padding: 0;
+    margin-top: 50px
+}
+#sixth_content {
+    width: 470px;
+    margin-left: 100px; 
+
+}
+#sixth_left {
+    padding: 0 15px;
+}
+#sixth_right {
+    padding: 0 15px;
+    float: right;
+}
+#sixth_right img {
+    width : 570px;
+    margin: 0 auto;
+    
+}
+/* 일곱번째 페이지*/
+#seventh {
+    position: relative;
+    width : 1200px;
+    margin: 0 auto;
+}
+.seventh_div {
+    float: right;
+    padding: 0;
+    
+}
+#seventh_wihte_box {
+    position: relative;
+    margin-top: 50px;
+    width: 570px;
+    height: 300px;
+    padding: 60px 15px 80px 15px;
+    background-color: rgba(255,255,255, 0.8);
+    text-align: right;
+
+}
+#seventh_left {
+    margin-top: 1790px;
+    float: left;
+    position: absolute;
+    z-index: -1;
+    padding : 0 15px;
+}
+#seventh_left img {
+    width : 870px;
+    margin: 0 auto;
+}
+/* 여덟번째 페이지 */
+#eighth {
+    width: 600px;
+    margin: 50px auto;
+}
+.eighth_div {
+    
+    float: left;
+    width: 270px;
+    padding: 0;
+    margin-right: 15px;
+    margin-left: 15px;
+    
+}
+#eighth_left {
+    margin-top: 848px;
+    padding: 0 auto;
+   
+}
+#eighth_right {
+    padding: 0 auto;
+    margin-top: 395px;
+    
+}
+#eighth_right img {
+    width : 270px;
+    margin: 0 auto;
+    
+}
+#eighth_grey {
+    position: relative;
+    background-color: rgb(216, 216, 216);
+    height: 460px;
+    margin-top: 2490px;
+    z-index: -1;
+}
+/* 아홉번째 페이지 */
+#nineth{
+    width: 1200px;
+    margin: 50px auto;
+}
+#nineth_title {
+    width: 270px;
+    margin: 0 15px;
+    padding: 0 auto;
+}
+#nineth_artwork{
+    width: 1200px;
+    margin: 15px auto;
+}
+.nineth_pics{
+    width: 270px;
+    margin: 0 15px;
+    padding: 0 auto;
+    float: left;
+}
+.nineth_pics img{
+    width: 270px;
+}
+.nineth_pics p{
+    text-align: right;
+    margin: 5px 0;
+}
+#nineth_bottom{
+    margin: 90px 15px 50px 15px;
+    width: 570px;
+    float: right;
+    font-size: 13.5px;
+}
+footer{
+    background-color: rgb(216, 216, 216);
+    margin-top: 640px;
+    height: 280px;
+}
+#footer_wrap{
+    width: 1200px;
+    margin: 50px auto;
+}
+#footer_icon{
+    float: left;
+    width: 570px;
+    margin: 40px 15px 20px 15px;
+}
+#footer_para{
+    float: left;
+    width: 570px;
+    margin: 0px 15px;
+    text-align: right;
+}
+#footer_para p {
+    margin: 40px 0px; 
+}
