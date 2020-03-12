@@ -18,23 +18,23 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      //   $(document).ready(function() {
-      //     $("search").click(function() {
-      $.ajax({
-        method: "GET",
-        url: "https://dapi.kakao.com/v3/search/book?target=title",
-        data: { query: "미움받을 용기" },
-        headers: {
-          Authorization: "KakaoAK 4cc3b5d6dcc5350ca6b605a6e75e2c88"
-        }
-      }).done(function(msg) {
-        console.log(msg.documents[0].title);
-        console.log(msg.documents[0].thumbnail);
-        $("p").append("<strong>" + msg.documents[0].title + "</strong>");
-        $("p").append("<img src='" + msg.documents[0].thumbnail + "'/>");
+      $(document).ready(function() {
+        $("search").click(function() {
+          $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: $("#bookName").val() },
+            headers: {
+              Authorization: "KakaoAK 4cc3b5d6dcc5350ca6b605a6e75e2c88"
+            }
+          }).done(function(msg) {
+            console.log(msg.documents[0].title);
+            console.log(msg.documents[0].thumbnail);
+            $("p").append("<strong>" + msg.documents[0].title + "</strong>");
+            $("p").append("<img src='" + msg.documents[0].thumbnail + "'/>");
+          });
+        });
       });
-      //     });
-      //   });
     </script>
   </body>
 </html>
