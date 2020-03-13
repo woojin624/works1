@@ -67,3 +67,10 @@ article {
 article h1 {
   margin: 1.5rem 0;
 }
+.animateOut {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.animateIn {
+  opacity: 1;
+}
