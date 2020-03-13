@@ -13,16 +13,22 @@ var sliderWrapper = document.getElementsByClassName("container"),
 //슬라이드의 높이 확인하여 부모의 높이로 지정하기
 function calculateTallestSlide() {
   for (var i = 0; i < slideCount; i++) {
-    topHeight = slides[i].offsetHeight;
+    if (slides[i].offsetHeight > topHeight) {
+      topHeight = slides[i].offsetHeight;
+    }
   }
 
-  sliderWrapper[0].style.height = topHeight;
-  sliderContainer[0].style.height = topHeight;
+  sliderWrapper[0].style.height = topHeight + "px";
+  sliderContainer[0].style.height = topHeight + "px";
 }
 
 calculateTallestSlide();
 
 // 슬라이드가 있으면 가로로 배열하기
+
+for (var i = 0; i < slideCount; i++) {
+  slides[i].style.left = i * 100 + "%";
+}
 
 // 슬라이드 이동 함수
 
