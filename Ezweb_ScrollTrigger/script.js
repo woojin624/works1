@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     toggle: {
       visible: "animateIn",
       hidden: "animateOut"
-    }
+    },
+    once: true
   });
 });
