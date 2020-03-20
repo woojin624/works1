@@ -79,7 +79,6 @@ body {
   overflow: hidden;
   left: 0;
   top: -200px;
-  /* clip: rect(0 100% 400px 0); */
   clip-path: inset(15% 0 13% 0);
   z-index: -4;
 }
@@ -108,13 +107,6 @@ body {
   align-items: center;
   z-index: 5;
 }
-/* .main_nav_close:hover {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  background-color: rgba(22, 22, 22, 0.8);
-} */
 .mnc {
   width: 1080px;
   margin: 0 auto;
@@ -223,32 +215,33 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.nh_wrap {
+.newhero .nh_wrap {
   width: 100%;
   max-width: 1080px;
+
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.nh_ps {
+.newhero .nh_ps {
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
+  margin-top: 60px;
   margin-right: 24px;
 }
-.nh_p1 {
+.newhero .nh_p1 {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
-.nh_new {
+.newhero .nh_new {
   font-size: 40px;
   font-family: "koverwatch";
   color: var(--orange-color);
   margin-right: 40px;
 }
-.nh_echo {
+.newhero .nh_echo {
   font-size: 92px;
   font-family: "koverwatch";
   padding-right: 8px;
@@ -257,18 +250,20 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.nh_now {
-  font-size: 18px;
+.newhero .nh_now {
+  font-size: 24px;
   margin-bottom: 20px;
   color: #4a5c8b;
   font-weight: 500;
 }
-.nh_31 {
-  font-size: 16px;
+.newhero .nh_31 {
+  width: 100%;
+  max-width: 400px;
+  font-size: 18px;
   margin-bottom: 26px;
   line-height: 1.7;
 }
-.nh_page {
+.newhero .nh_page {
   font-size: var(--font-buy-web);
   color: white;
   background: var(--orange-color);
@@ -277,3 +272,177 @@ body {
 }
 
 /* 새소식과 이벤트 */
+.news_event {
+  margin-top: 740px;
+  padding: 50px;
+}
+.news_event .ne_wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #414141;
+}
+.news_event .ne_wrap .news {
+  width: 100%;
+  max-width: 580px;
+}
+.news_event .ne_wrap .news hr {
+  color: black;
+}
+.news_event .news_title {
+  font-size: 28px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news_event .news_title i {
+  font-size: 18px;
+}
+.news_event .news_list {
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+}
+.news_event .news_list ul {
+  list-style: none;
+}
+.news_event .news_list ul:nth-child(1) li {
+  margin-bottom: 22px;
+  font-size: 18px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.news_event .news_list ul:nth-child(2) li {
+  margin-bottom: 22px;
+  font-size: 16px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+}
+.news_event .ne_wrap .event {
+  width: 100%;
+  max-width: 420px;
+  margin-left: 40px;
+}
+.news_event .ne_wrap .event hr {
+  color: black;
+}
+.news_event .event_title {
+  font-size: 28px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news_event .event_title i {
+  font-size: 18px;
+}
+.news_event .event_list {
+  margin-top: 26px;
+}
+.news_event .event_list .event_thumb {
+  position: relative;
+}
+.news_event .event_list .snow {
+  position: absolute;
+  bottom: 5px;
+  background: rgba(22, 22, 22, 0.6);
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  padding: 12px 12px 10px 12px;
+}
+.news_event .event_list img {
+  width: 100%;
+}
+
+/* 오버워치의 다양한 영웅들 */
+.heros {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/heros_background.png");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #d7d7d7;
+}
+.heros_wrap {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+.heros_title {
+  font-family: "koverwatch";
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.heros_para {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.heros_main {
+  width: 100%;
+  height: 700px;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hmc_hero {
+  display: flex;
+  align-items: center;
+}
+.hmc_para {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  max-width: 300px;
+  left: 25%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.hmc_name {
+  font-family: "koverwatch";
+  font-size: 90px;
+  margin-bottom: 20px;
+}
+.hmc_con {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+.hmc_arrow {
+  padding: 8px 18px;
+  border: 2px solid #d7d7d7;
+}
+.hmc_arrow img {
+  width: 82px;
+}
+.hmc_img {
+  z-index: 0;
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  right: 25%;
+  transform: translateX(50%);
+}
+.hmc_img img {
+  width: 100%;
+}
