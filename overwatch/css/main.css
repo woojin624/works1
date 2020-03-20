@@ -378,23 +378,24 @@ body {
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 80px 0 80px 0;
 }
 .heros_title {
   font-family: "koverwatch";
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .heros_para {
   text-align: center;
   font-size: 18px;
+  line-height: 1.6;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 .heros_main {
   width: 100%;
-  height: 700px;
+  height: 600px;
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
@@ -403,7 +404,8 @@ body {
   position: relative;
 }
 .hmc_hero {
-  display: flex;
+  /* display: flex; */
+  display: none;
   align-items: center;
 }
 .hmc_para {
@@ -413,14 +415,14 @@ body {
   align-items: center;
   position: absolute;
   width: 100%;
-  max-width: 300px;
+  max-width: 340px;
   left: 25%;
   transform: translateX(-50%);
   z-index: 1;
 }
 .hmc_name {
   font-family: "koverwatch";
-  font-size: 90px;
+  font-size: 80px;
   margin-bottom: 20px;
 }
 .hmc_con {
@@ -438,11 +440,57 @@ body {
 .hmc_img {
   z-index: 0;
   width: 100%;
-  max-width: 600px;
+  height: 100%;
+  max-width: 650px;
+  max-height: 600px;
   position: absolute;
   right: 25%;
-  transform: translateX(50%);
+  transform: translateX(40%);
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 }
 .hmc_img img {
-  width: 100%;
+  max-width: 650px;
+  max-height: 600px;
+  max-width: auto;
+  height: auto;
+}
+.showclass {
+  display: flex;
+}
+.hero_thumbs ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero_thumbs ul li {
+  /* clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); */
+  background: #626262;
+  margin: 4px;
+  border: 3px solid white;
+  max-width: 81px;
+  max-height: 90px;
+  border-radius: 10%;
+  transform: skew(-6deg, 0);
+  border: 3px solid #d7d7d7;
+  overflow: hidden;
+  cursor: pointer;
+}
+.hero_thumbs ul li img {
+  width: 100px;
+  display: block;
+  max-width: initial;
+  transform: translateX(-10px) skew(6deg, 0);
+}
+.hero_name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  margin: 3px 0;
+}
+.hero_name p {
+  margin-right: 11px;
 }
