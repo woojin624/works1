@@ -10,6 +10,12 @@
     ></script>
     <link rel="stylesheet" href="css/main2.css" />
     <script defer src="js/main.js"></script>
+    <script defer src="js/videocontrol.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="g_nav">
@@ -36,9 +42,32 @@
         </ul>
       </nav>
     </header>
+    <div class="mobile_nav">
+      <div class="mobile_nav_icon">
+        <div><i class="fas fa-bars"></i></div>
+        <div><img src="images/logo_mobile_grey.png" alt="" /></div>
+        <div><i class="far fa-user"></i></div>
+      </div>
+    </div>
     <div class="main">
       <div class="main_mask">
-        <video src="media/Overwatch_video.mp4" muted loop></video>
+        <div>
+          <div class="button_cover" id="vplay">
+            <button><i class="fas fa-play"></i></button>
+            <p>재생</p>
+          </div>
+          <div class="button_cover" id="vpause">
+            <button><i class="fas fa-pause"></i></button>
+            <p>일시정지</p>
+          </div>
+        </div>
+        <video
+          src="media/Overwatch_video.mp4"
+          id="myvideo"
+          autoplay
+          muted
+          loop
+        ></video>
         <div class="main_nav">
           <div class="main_nav_close">
             <div class="mnc">
@@ -101,10 +130,10 @@
         </div>
 
         <div class="main_logo">
-          <div>
-            <img src="images/main_logo.png" alt="main_logo" />
+          <div class="main_logotext">
+            <img src="images/big_logo_text.png" alt="main_logo" />
           </div>
-          <div>
+          <div class="main_pns">
             <img src="images/pc nintendo ps4.png" alt="pc" />
           </div>
           <div>
@@ -132,7 +161,9 @@
               모든 장비를 갖추고 있습니다.
             </p>
           </div>
-          <div><p class="nh_page">영웅 페이지로 이동하기</p></div>
+          <div class="nh_p_mobile">
+            <p class="nh_page">영웅 페이지로 이동하기</p>
+          </div>
         </div>
       </div>
     </div>
