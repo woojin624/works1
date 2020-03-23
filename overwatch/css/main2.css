@@ -97,9 +97,9 @@ body {
 }
 .button_cover:nth-child(1) {
   position: absolute;
-  top: 600px;
+  top: 650px;
   left: 8%;
-  display: flex;
+  display: none;
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
