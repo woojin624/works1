@@ -20,7 +20,7 @@
   --font-micro: 10px;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean");
 @font-face {
   font-family: "koverwatch";
   src: url(/overwatch/media/koverwatch.ttf) format(truetype);
@@ -34,6 +34,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
+  width: 100%;
 }
 
 /* 맨위 글로벌 내비게이션 */
@@ -80,9 +81,15 @@ body {
   cursor: pointer;
   color: white;
 }
-
 /* 메인 동영상 플레이 및 로고 */
 
+.main {
+  /* width: 100%;
+  overflow-x: hidden;
+  height: 100vh; */
+
+  position: relative;
+}
 .main_mask {
   position: relative;
 }
@@ -150,7 +157,7 @@ body {
   position: absolute;
   overflow: hidden;
   z-index: 9;
-  height: 268px;
+  height: 250px;
   background-color: rgba(22, 22, 22, 0.8);
 }
 .main_nav_close {
@@ -166,37 +173,37 @@ body {
   display: flex;
   justify-content: space-between;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
-.mnc ul {
+.mnc > ul {
   display: flex;
   align-items: center;
   list-style: none;
 }
-.mnc ul:nth-child(1) li img {
+.mnc ul:nth-child(1) > li > img {
   width: 66px;
   margin-top: 2px;
   cursor: pointer;
 }
-.mnc ul:nth-child(1) li {
-  margin-right: 55px;
+.mnc_li {
+  /* margin-right: 55px; */
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.mnc ul:nth-child(1) li:hover {
-  margin-right: 55px;
+.mnc_li:hover {
+  /* margin-right: 55px; */
   cursor: pointer;
   font-weight: 600;
   color: rgb(255, 241, 218);
   text-shadow: 1px 1px 2px black, 0 0 25px rgb(255, 249, 68),
     0 0 5px rgb(255, 222, 133);
 }
-.mnc ul:nth-child(2) li {
+.mnc_ul2 > li {
   margin-left: 20px;
   cursor: pointer;
 }
-.mnc ul:nth-child(2) li:nth-child(1):hover {
+.mnc_ul2 > li:nth-child(1):hover {
   margin-left: 20px;
   cursor: pointer;
   color: rgb(255, 241, 218);
@@ -212,21 +219,40 @@ body {
 .mnc_buy_box:hover {
   background: #ffb74a;
 }
-.main_nav_open {
-  /* display: none; */
-  width: 100%;
-  height: 268px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  z-index: -1;
-}
 .mno_border {
   width: 100%;
   height: 188;
   border-top: 1px solid rgba(122, 122, 122, 0.3);
-  margin: 80px auto 0 auto;
+  margin: 4px auto 0 auto;
+}
+.mn_frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-right: 55px;
+}
+.mno_ul {
+  position: absolute;
+  list-style: none;
+  text-align: center;
+  top: 63px;
+  margin: 0;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  font-weight: 400;
+  color: rgb(193, 193, 193);
+}
+.mno_ul > li {
+  margin: 5px 0;
+  cursor: pointer;
+}
+.mno_ul > li:hover {
+  color: white;
 }
 .mno {
   width: 1080px;
@@ -234,29 +260,7 @@ body {
   display: flex;
   color: rgb(193, 193, 193);
   padding: 10px 0;
-  font-weight: 400;
 }
-.mno ul {
-  list-style: none;
-  text-align: center;
-}
-.mno ul li {
-  margin: 12px 0;
-  cursor: pointer;
-}
-.mno ul li:hover {
-  color: white;
-}
-.mno ul:nth-child(1) {
-  margin: 0 124px 0 95px;
-}
-.mno ul:nth-child(3) {
-  margin: 0 33px 0 10px;
-}
-.mno ul:nth-child(5) {
-  margin: 0 18px 0 25px;
-}
-
 .main_logo {
   width: 100%;
   max-width: 1000px;
@@ -273,12 +277,12 @@ body {
 .main_logotext img {
   width: 100%;
   max-width: 900px;
-  padding: 0 30px;
+  padding: 0 1vw;
 }
 .main_pns img {
   width: 100%;
   max-width: 900px;
-  padding: 0 30px;
+  padding: 0 1vw;
 }
 .main_logo > div:nth-child(1) {
   margin-top: 200px;
@@ -331,16 +335,17 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
-.newhero .nh_new {
+.newhero .nh_new i {
   font-size: 40px;
   font-family: "koverwatch";
   color: var(--orange-color);
-  margin-right: 40px;
+  /* margin-right: 30px; */
+  padding-right: 40px;
 }
-.newhero .nh_echo {
+.newhero .nh_echo i {
   font-size: 92px;
   font-family: "koverwatch";
-  padding-right: 8px;
+  padding-right: 16px;
   background: linear-gradient(to bottom, #476780, #cbd5d9 60%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -606,6 +611,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+  padding: 8px;
 }
 .hero_thumbs ul li {
   background: #626262;
@@ -932,25 +938,32 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
-  .button_cover:nth-child(1) {
-    top: 605px;
-    left: 8%;
+  .main_mask {
+    position: absolute;
+    height: 700px;
+    top: -15px;
+    background-image: url(../images/sigma-screenshot-003.jpg);
+    width: 100%;
+    min-height: 100%;
+    background-position: 34%;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  .button_cover p {
-    font-size: 14px;
+  .main_logo {
+    top: 0px;
   }
-  .button_cover button i {
-    font-size: 14px;
-    color: white;
+  .main_logo > div:nth-child(1) {
+    margin-top: 150px;
   }
-  .button_cover button {
-    margin-right: 10px;
-    width: 26px;
-    height: 26px;
-    border-radius: 10%;
-    background: var(--orange-color);
-    border: 1px solid var(--orange-color);
-    cursor: pointer;
+  .main_logo > div {
+    margin: 35px 15px;
+  }
+  .main video {
+    display: none;
+  }
+  #vplay,
+  #vpause {
+    display: none;
   }
   .buy_box {
     background: var(--orange-color);
@@ -999,6 +1012,7 @@ footer {
   }
   .news_event {
     padding: 30px 0;
+    margin-top: 690px;
   }
 
   .news_event .news_title {
@@ -1031,7 +1045,7 @@ footer {
     align-items: flex-end;
     margin-right: 24px;
     margin-left: 24px;
-    padding: 40px 0 0 0;
+    padding: 20px 0 0 0;
   }
   .newhero .nh_wrap {
     width: 100%;
@@ -1047,41 +1061,49 @@ footer {
   .nh_p_mobile {
     position: absolute;
     left: 50%;
-    top: 360px;
+    top: 280px;
     transform: translateX(-50%);
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
   .newhero .nh_new {
-    font-size: 32px;
-    margin-right: 30px;
+    margin-right: 0px;
     filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+  }
+  .newhero .nh_new i {
+    font-size: 34px;
+    padding-right: 30px;
   }
   .newhero .nh_echo {
-    font-size: 76px;
-    padding-right: 8px;
+    padding-right: 0px;
     filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
   }
+  .newhero .nh_echo i {
+    font-size: 74px;
+    padding-right: 16px;
+  }
   .newhero .nh_now {
-    font-size: 20px;
+    font-size: 16px;
+    padding-right: 8px;
     margin-bottom: 20px;
     filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
   }
   .newhero .nh_31 {
     width: 100%;
     max-width: 290px;
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 26px;
-    line-height: 1.7;
+    line-height: 1.6;
+    padding-right: 2px;
     font-weight: 500;
     filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
   }
   .newhero {
     position: relative;
-    top: 740px;
+    top: 684px;
     width: 100%;
-    height: 450px;
+    height: 350px;
     background-image: url("../images/echo_page.jpg");
     min-height: 100%;
     background-position: 43%;
@@ -1140,4 +1162,6 @@ footer {
   .footer_top {
     padding: 40px 0 25px 0;
   }
+}
+@media screen and (max-width: 480) {
 }
