@@ -926,8 +926,12 @@ footer {
   height: 100vh;
   position: fixed;
   z-index: 9900;
+  left: -100vw;
   top: 0;
   background-color: rgba(23, 23, 23, 0.6);
+}
+.mobile_nav_icon > div {
+  cursor: pointer;
 }
 .mobile_nav_side_wrap {
   width: 320px;
@@ -943,6 +947,9 @@ footer {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+.mobile_nav_side.active3 {
+  left: 0;
 }
 .mns_panel_heading {
   padding: 15px 30px;
@@ -1010,7 +1017,7 @@ footer {
     display: block;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), screen and (max-height: 668px) {
   .main_mask {
     position: absolute;
     height: 700px;
