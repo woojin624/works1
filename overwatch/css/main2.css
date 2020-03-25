@@ -339,7 +339,6 @@ body {
   font-size: 40px;
   font-family: "Do Hyeon", sans-serif;
   color: var(--orange-color);
-  /* margin-right: 30px; */
   padding-right: 40px;
 }
 .nh_echo i {
@@ -532,7 +531,6 @@ body {
   max-width: 1080px;
   margin: 0 auto;
   display: flex;
-  /* display: none; */
   align-items: center;
   position: absolute;
 }
@@ -547,7 +545,6 @@ body {
 }
 .hmc_hero {
   display: flex;
-  /* display: none; */
   align-items: center;
 }
 .hmc_para {
@@ -600,7 +597,6 @@ body {
   transform: translateX(40%);
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 }
 .hmc_img img {
   max-width: 650px;
@@ -858,23 +854,14 @@ footer {
   align-items: center;
   padding: 0 0 40px 0;
 }
-.footer_blue {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
+.footer_blue,
 .footer_yellow {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.fb1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.fb1,
 .fy1 {
   display: flex;
   justify-content: center;
@@ -1083,9 +1070,7 @@ footer {
   background: rgb(33, 37, 41);
 }
 @media screen and (max-width: 1079px) {
-  .g_nav {
-    display: none;
-  }
+  .g_nav,
   .main_nav {
     display: none;
   }
@@ -1098,9 +1083,7 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .fp_line2 {
-    align-items: center;
-  }
+  .fp_line2,
   .fp_line3 {
     align-items: center;
   }
@@ -1306,7 +1289,7 @@ footer {
     padding: 20px;
   }
   .heros_wrap {
-    padding: 60px 0 60px 0;
+    padding: 60px 0;
   }
   .fp_line1 ul li:nth-child(odd) {
     margin: 0 0 0 8px;
@@ -1452,9 +1435,7 @@ footer {
   .news_event .event_title i {
     font-size: 15px;
   }
-  .news_event .news_list {
-    margin-top: 20px;
-  }
+  .news_event .news_list,
   .news_event .event_list {
     margin-top: 20px;
   }
@@ -1470,7 +1451,7 @@ footer {
     padding: 20px;
   }
   .heros_wrap {
-    padding: 40px 0 40px 0;
+    padding: 40px 0;
   }
   .buy_pack {
     flex-direction: column;
