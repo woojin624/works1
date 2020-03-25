@@ -1,7 +1,4 @@
-var mnsPanel = document.getElementsByClassName("mns_panel"),
-  panelHeading = document.getElementsByClassName("mns_panel_heading"),
-  panelBody = document.getElementsByClassName("mns_panel_body");
-
+//왼쪽 사이드 내비------------------------------------------------------
 const openBtn = document.getElementById("mns_openBtn");
 const closeBtn = document.getElementById("mns_closeBtn");
 const mns = document.querySelector(".mobile_nav_side");
@@ -17,7 +14,7 @@ const closeMns = () => {
 ovarlay.addEventListener("click", closeMns);
 openBtn.addEventListener("click", openMns);
 closeBtn.addEventListener("click", closeMns);
-
+//오른쪽 사이드 내비------------------------------------------------------
 const openBtn2 = document.getElementById("mas_openBtn");
 const closeBtn2 = document.getElementById("mas_closeBtn");
 const mas = document.querySelector(".mobile_account_side");
@@ -33,6 +30,10 @@ const closeMas = () => {
 ovarlay2.addEventListener("click", closeMas);
 openBtn2.addEventListener("click", openMas);
 closeBtn2.addEventListener("click", closeMas);
+//패널 여닫------------------------------------------------------
+var mnsPanel = document.getElementsByClassName("mns_panel"),
+  panelHeading = document.getElementsByClassName("mns_panel_heading"),
+  panelBody = document.getElementsByClassName("mns_panel_body");
 
 for (var i = 0; i < panelHeading.length; i++) {
   panelHeading[i].addEventListener("click", function(ev) {
