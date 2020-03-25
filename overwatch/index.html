@@ -44,18 +44,19 @@
     </header>
     <div class="mobile_nav">
       <div class="mobile_nav_icon">
-        <div class="mns_openBtn"><i class="fas fa-bars"></i></div>
+        <div id="mns_openBtn"><i class="fas fa-bars"></i></div>
         <div><img src="images/logo_mobile_grey.png" alt="" /></div>
-        <div><i class="far fa-user"></i></div>
+        <div id="mas_openBtn"><i class="far fa-user"></i></div>
       </div>
     </div>
-    <div class="mobile_nav_side">
+    <div class="mobile_nav_side hidden">
+      <div class="mns_overlay mnso_hidden"></div>
       <div class="mobile_nav_side_wrap">
         <div
           style="margin: 40px 0; display: flex; justify-content: center; width: 100%;"
         >
           <img style="width: 260px;" src="images/big_logo_text.png" alt="" />
-          <div class="mns_clostBtn"><i class="fas fa-times"></i></div>
+          <div id="mns_closeBtn"><i class="fas fa-times"></i></div>
         </div>
         <div class="mns_panel">
           <div class="mns_panel_heading">
@@ -145,6 +146,76 @@
             src="images/blizzard-transparent-logo-5 grey.png"
             alt=""
           />
+        </div>
+      </div>
+    </div>
+    <div class="mobile_account_side hidden_man">
+      <div class="mas_overlay maso_hidden"></div>
+      <div class="mobile_account_side_wrap">
+        <div
+          style="margin: 20px 0; display: flex; justify-content: center; width: 100%; cursor: pointer;"
+        >
+          <img
+            style="width: 100px;"
+            src="images/blizzard-transparent-logo-5.png"
+            alt=""
+          />
+          <div id="mas_closeBtn"><i class="fas fa-times"></i></div>
+        </div>
+        <div
+          style=" background: #282d3b; border-top: 0.5px solid rgba(159, 159, 159, 0.8);"
+        >
+          <div class="mas_login_box">
+            로그인
+          </div>
+        </div>
+        <div class="mas_panel2">
+          <div class="mas_panel_heading">
+            고객지원
+          </div>
+        </div>
+        <div class="mas_panel2">
+          <div class="mas_panel_heading">
+            계정 관리
+          </div>
+        </div>
+        <div class="mas_panel2">
+          <div class="mas_panel_heading">
+            무료 회원 가입
+          </div>
+        </div>
+        <div class="mas_panel">
+          <div class="mas_panel_heading">
+            메인
+          </div>
+        </div>
+        <div class="mas_panel">
+          <div class="mas_panel_heading">
+            게임<i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="mas_panel">
+          <div class="mas_panel_heading">
+            샵
+          </div>
+        </div>
+        <div class="mas_panel">
+          <div class="mas_panel_heading">
+            새소식
+          </div>
+        </div>
+        <div class="mas_panel">
+          <div class="mas_panel_heading">
+            E스포츠<i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="mas_panel_body">
+            <ul class="mas_ul"></ul>
+          </div>
+        </div>
+        <div class="mas_panel">
+          <div class="mas_panel_heading">
+            이벤트
+          </div>
         </div>
       </div>
     </div>
