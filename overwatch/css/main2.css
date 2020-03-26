@@ -30,6 +30,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+a,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
 body {
   font-family: "Noto Sans KR", sans-serif;
   overflow-x: hidden;
