@@ -1,0 +1,14 @@
+section.background { 
+    position: absolute;
+    display: flex; 
+    left: 0;
+    top: 0;
+    z-index: -9999;
+}
+section.background > .main-back {
+    margin-left: 50vw;
+    width: 50vw;
+    height: 100vh;
+    background-color: #3495f8;
+
+}

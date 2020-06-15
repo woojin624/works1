@@ -1,0 +1,24 @@
+div.side-bar {
+    position: absolute; left:10px; display: flex; height: 100vh;
+    padding: 10vh 0;
+    justify-content: center;}
+div.side-bar > .scrollDown { position: relative; width: 40px;}
+div.side-bar > .scrollDown div:first-child { 
+    color: #828282; font-size: 16px;
+    width: 120px; transform: rotate(-90deg);
+    position: absolute; left: -39px; bottom: 120px; }
+div.side-bar > .scrollDown img { position: absolute; bottom: 0; }
+div.side-bar > .long-bar { width: 1px; height: 80vh; background-color: #cacaca;}
+div.side-bar > .slide-bar { 
+    position: absolute; right: -2px;
+    width: 5px ; height: 15vh; background-color: #fcd224;
+    border-radius: 3px;
+}
+div.menu-bar {
+    position: absolute; top: 50px; right: 50px;
+    width: 46px; height: 46px; border: 2px solid white;
+}
+div.menu-bar > .menu-line {
+    width: 22px; height: 2px; background: white;
+    margin: 5px 0;
+}
