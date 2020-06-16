@@ -1,0 +1,10 @@
+section.overview {
+    position: relative;
+}
+section.overview > .video-container {
+    position: relative;
+}
+section.overview > .video-container  > video {
+    position: absolute;
+    left: 50vw;
+}

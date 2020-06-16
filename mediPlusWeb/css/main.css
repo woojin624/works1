@@ -26,3 +26,4 @@ section.main > article.right > .text-ani {
     margin-left: 50px;
 }
 section.main > article.right > .text-ani > p { line-height: 1.2;}
+section.main {display: none;}
