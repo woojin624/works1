@@ -8,3 +8,4 @@ section.overview > .video-container  > video {
     position: absolute;
     left: 50vw;
 }
+section.overview { display: none;}

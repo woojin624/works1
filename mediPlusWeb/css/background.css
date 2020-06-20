@@ -8,13 +8,13 @@ section.background {
 }
 section.background > .main-back {
     margin-left: 50vw;
+    width: 50vw;
+    height: 100vh;
+    background-color: #3495f8;
+    /* display: none; */
+}
+/* section.background > .overview-back {
     width: 3000px;
     height: 3000px;
     background-color: #3495f8;
-    display: none;
-}
-section.background > .overview-back {
-    width: 3000px;
-    height: 3000px;
-    background-color: #3495f8;
-}
+} */

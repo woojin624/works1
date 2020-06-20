@@ -1,0 +1,29 @@
+section.background { 
+    position: fixed;
+    display: flex; 
+    left: 0;
+    top: 0;
+    z-index: -999;
+    overflow: hidden;
+}
+section.background > .main-back {
+    margin-left: 50vw;
+    width: 100vw;
+    width: 50vw;
+    height: 100vh;
+    background-color: #fff;
+    /* 메인컬러 */
+    background-color: #3495f8;
+}
+/* div.yellowBG {  
+    background-color: #fcd432; width: 50vw; height: 50vh; 
+    position: fixed; right: 0; bottom: 0; z-index: 0;
+}
+div.blackBG {
+    background-color: #000000; width: 50vw; height: 16.6666vh; 
+    position: fixed; right: 0; bottom: 0; z-index: 0;   
+}
+div.whiteBG {
+    background-color: #ffffff; width: 50vw; height: 16.6666vh; 
+    position: fixed; right: 0; bottom: 16.6666vh; z-index: 0;   
+} */

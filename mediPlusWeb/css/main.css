@@ -1,5 +1,5 @@
 section.main {
-    width: 1480px; display: flex; margin: 0 auto; position: relative;
+    width: 1480px; overflow: hidden; display: flex; margin: 0 auto; position: relative;
 }
 section.main > div.bottom-arrow { 
     position: absolute; width: 91px; height: 91px; 
@@ -26,4 +26,4 @@ section.main > article.right > .text-ani {
     margin-left: 50px;
 }
 section.main > article.right > .text-ani > p { line-height: 1.2;}
-section.main {display: none;}
+/* section.main {display: none;} */
