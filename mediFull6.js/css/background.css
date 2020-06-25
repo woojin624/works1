@@ -12,9 +12,9 @@ section#background {
 section#background > div#main-back {
     /* margin-left: 50vw; */
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 300%;
-    left: 0%;
+    left: 50%;
     top: 0%;
     /* background-color: #fff; */
     /* 메인컬러 */

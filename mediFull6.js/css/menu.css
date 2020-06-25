@@ -6,6 +6,7 @@ div.menu {
     font-family: 'Poppins', sans-serif;
     font-size: 1.7vw;
     font-weight: 400;
+    cursor: pointer;
 }
 div.menu > div { 
     position: absolute; width: 25vw; height: 100vh; 
