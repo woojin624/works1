@@ -1,0 +1,149 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: -9999;
+}
+.main_box {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+}
+.main_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 130px;
+  z-index: 2;
+}
+.main_top {
+  margin-bottom: 30px;
+}
+.main_top img {
+  width: 260px;
+  margin-left: -42px;
+}
+.main_mid {
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.8;
+  margin: 20px 0 40px 0;
+}
+.main_bot {
+  margin-top: 190px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+}
+.main_bot img {
+  margin-top: 10px;
+  width: 40px;
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.second {
+  margin: 100px;
+}
+.second_wrap {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sw_title {
+  font-size: 36px;
+  margin: 20px 0;
+  font-weight: 500;
+}
+.sw_con {
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+.sw_img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sw_img img {
+  width: 1120px;
+  margin: 20px 0;
+  z-index: 2;
+}
+.sw_box {
+  position: absolute;
+  width: 100vw;
+  height: 300px;
+  background: rgb(36, 36, 36);
+  z-index: 1;
+}
+.third {
+  margin: 100px;
+}
+.third_wrap {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tw_title {
+  font-size: 36px;
+  margin: 40px 0 20px 0;
+  font-weight: 500;
+}
+.tw_con {
+  text-align: center;
+  margin: 10px 0 60px 0;
+  line-height: 1.6;
+}
+.tw_img {
+  display: flex;
+  margin: 20px 0 0px 0;
+}
+.tw_img img {
+  width: 500px;
+}
+.tis2 img {
+  transform: perspective(700px) rotateY(30deg) translateX(90px) translateZ(40px);
+}
+.tis3 img {
+  transform: perspective(700px) translateZ(-150px);
+}
+.tis4 img {
+  transform: perspective(700px) rotateY(-30deg) translateX(-90px)
+    translateZ(40px);
+}

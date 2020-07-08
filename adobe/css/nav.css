@@ -1,0 +1,65 @@
+nav {
+  width: 100vw;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+nav.on {
+  position: fixed;
+  top: -60px;
+}
+.nav_frame {
+  margin: 0 auto;
+  width: 1120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.nav_frame .nav_ul_box1 ul {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+.nav_frame .nav_ul_box1 ul li {
+  margin: 0 10px;
+  transition: all 0.2s ease;
+}
+.nav_frame .nav_ul_box1 ul li:first-child {
+  margin: 0 10px 0 0;
+}
+.nav_frame .nav_ul_box1 ul li:hover {
+  cursor: pointer;
+  color: rgb(255, 241, 218);
+  text-shadow: 1px 1px 2px black, 0 0 20px rgb(255, 249, 68),
+    0 0 5px rgb(255, 222, 133);
+}
+.nav_frame .nav_ul_box1 img {
+  width: 32px;
+}
+.nav_frame .nav_ul_box2 ul {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.nav_frame .nav_ul_box2 ul li {
+  margin: 0 40px;
+  transition: all 0.2s ease;
+}
+.nav_frame .nav_ul_box2 ul li:last-child {
+  margin: 0 0 0 40px;
+}
+.nav_frame .nav_ul_box2 ul li:hover {
+  cursor: pointer;
+  color: rgb(255, 241, 218);
+  text-shadow: 1px 1px 2px black, 0 0 20px rgb(255, 249, 68),
+    0 0 5px rgb(255, 222, 133);
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}

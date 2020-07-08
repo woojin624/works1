@@ -1,0 +1,169 @@
+/* 모든 페이지를 fixed로 고정하여 화면의 한곳에 배치하였습니다 그 후 visibility를 hidden으로 두어 가린 후 active클래스가 더해지면 보이도록 했습니다. */
+section.albums{
+    position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100%; visibility: hidden; opacity: 0; transition: 1s
+}
+section.albums > p {
+    position: absolute; left: 50%; bottom: 6vh; 
+    transform: translate(-50%, 0); color: rgba(255, 255, 255, 0.5); 
+    font-size: 24px; opacity: 0;
+    animation: clickPlay 4s ease-in forwards;
+    
+}
+section.albums > .albums-wrap {
+    transform-style: preserve-3d; perspective: 2000px;
+    width: 1480px; height:0px; position: absolute; top: 50%; left: 50%;
+    transform: translate3d(-50%, -50%, 0); overflow: hidden; transition: .4s ease-in; opacity: 0;
+}
+/*  앨범전체를 감싸는 div입니다. 해당 요소에 회전값을 주어 앨범이 돌아가는 모습을 보여줍니다 */
+section.albums > .albums-wrap > .tray-wrap {
+    width: 1200px; height: 1200px; background: none; border-radius: 50%;
+     position: absolute; top: 50%; left: 50%; 
+    transform-style: preserve-3d; transition: 0.5s ease;
+    transform: translate3d(-50%, -50%, 0) rotateX(90deg) rotateZ(00deg);
+} 
+section.albums > .albums-wrap > .tray-wrap > .tray {
+    width: 1200px; height: 1200px; background: none; border-radius: 50%;
+    position: absolute; top: 0%; left:50%; 
+    transform-style: preserve-3d; 
+}
+/* 5개의 앨범의 각도를 돌려주어 원형을 그리는 듯하게 보이도록 배치했습니다 */
+section.albums > .albums-wrap > .tray-wrap > .first {transform: translate3d(-50%, 0, 0) rotateZ(00deg); }
+section.albums > .albums-wrap > .tray-wrap > .second { transform:translate3d(-50%, 0, 0) rotateZ(72deg); }
+section.albums > .albums-wrap > .tray-wrap > .third { transform: translate3d(-50%, 0, 0) rotateZ(144deg); }
+section.albums > .albums-wrap > .tray-wrap > .fourth { transform:translate3d(-50%, 0, 0) rotateZ(216deg); }
+section.albums > .albums-wrap > .tray-wrap > .fifth { transform:translate3d(-50%, 0, 0) rotateZ(288deg); }
+section.albums > .albums-wrap > .tray-wrap > .tray > .album {
+    position: absolute; width: 340px; height: 340px; top:90%; left: 50%; transform:translate(-50%, -50%);
+    margin: 50px auto; transition: 0.5s; transform-style: preserve-3d;
+}
+.album div {
+    position: absolute; opacity: 1; 
+}
+/* 앨범의 각면의 각도값을 변경하여 육면체의 3D모양으로 보이도록하였습니다 */
+.album .top { width: 340px; height: 20px; transform: translateY(161.5px) translateZ(170px) ; background: red; }
+.album .bottom { width: 340px; height: 20px; transform: translateY(161.5px) translateZ(-170px) rotateY(180deg);  background: blue; }
+.album .left { width: 340px; height: 20px; transform: rotateY(-90deg) translateY(161.5px) translateZ(170px);  background: green; }
+.album .right { width: 340px; height: 20px; transform: rotateY(90deg) translateY(161.5px) translateZ(170px);  background: yellow;  }
+.album .back { width: 340px; height: 340px; transform: rotateX(90deg) rotateZ(180deg) translateZ(8px);  background: white; }
+.album .front { width: 340px; height: 340px; transform: rotateX(-90deg) translateZ(12px);  background: coral; transform-origin: left; transition: 0.4s; cursor: pointer;}
+/* .album > .paper .cd { width: 400px; height: 400px; transform: rotateX(-90deg) translateZ(2px); transition: 0.4s; display: flex; justify-content: center; align-items: center;} */
+.album > .paper .cd { width: 340px; height: 340px; transition: 0.4s;}
+.album .paper { width: 340px; height: 340px; transform: rotateX(-90deg) translateZ(1px); background: coral; }
+
+/* 앨범의 앞면과 뒷면 그리고 측면에 들어가는 이미지들을 백그라운드 이미지로 첨부하였습니다 */
+section.albums > .albums-wrap > .tray-wrap > .tray > .album > .top { background: center / cover no-repeat url(../images/albumSideV.jpg)}
+section.albums > .albums-wrap > .tray-wrap > .tray > .album > .bottom { background: center / cover no-repeat url(../images/albumSideV.jpg)}
+section.albums > .albums-wrap > .tray-wrap > .tray > .album > .left { background: center / cover no-repeat url(../images/albumSideH.jpg)}
+section.albums > .albums-wrap > .tray-wrap > .tray > .album > .right { background: center / cover no-repeat url(../images/albumSideH.jpg)}
+
+section.albums > .albums-wrap > .tray-wrap .album > .paper > .playBtn {position: absolute; left: 50%; top: 50%; transform: translate(-12%, -47%); z-index: 999; cursor: pointer;}
+section.albums > .albums-wrap > .tray-wrap .album > .paper > .playBtn > img {width: 29%;}
+section.albums > .albums-wrap > .tray-wrap .album > .paper > .pauseBtn {position: absolute; left: 50%; top: 50%; transform: translate(-15.5%, -47%); z-index: 999; display: none; cursor: pointer;}
+section.albums > .albums-wrap > .tray-wrap .album > .paper > .pauseBtn > img {width: 31%;}
+
+section.albums > .albums-wrap > .tray-wrap > .first > .album > .front { background: center / cover no-repeat url(../images/albumCover1.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .first > .album > .back {background: center / cover no-repeat url(../images/albumCover1.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .first > .album > .paper {background: center / cover no-repeat url(../images/albumBack1.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .first > .album > .paper > .cd {background: center / 90% 90% no-repeat url(../images/albumCD1.png);}
+
+section.albums > .albums-wrap > .tray-wrap > .second > .album > .front { background: center / cover no-repeat url(../images/albumCover2.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .second > .album > .back {background: center / cover no-repeat url(../images/albumCover2.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .second > .album > .paper {background: center / cover no-repeat url(../images/albumBack2.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .second > .album > .paper >  .cd {background: center / 90% 90% no-repeat url(../images/albumCD2.png);}
+
+section.albums > .albums-wrap > .tray-wrap > .third > .album > .front { background: center / cover no-repeat url(../images/albumCover3.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .third > .album > .back {background: center / cover no-repeat url(../images/albumCover3.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .third > .album > .paper {background: center / cover no-repeat url(../images/albumBack3.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .third > .album > .paper >  .cd {background: center / 90% 90% no-repeat url(../images/albumCD3.png);}
+
+section.albums > .albums-wrap > .tray-wrap > .fourth > .album > .front { background: center / cover no-repeat url(../images/albumCover4.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .fourth > .album > .back {background: center / cover no-repeat url(../images/albumCover4.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .fourth > .album > .paper {background: center / cover no-repeat url(../images/albumBack4.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .fourth > .album > .paper >  .cd {background: center / 90% 90% no-repeat url(../images/albumCD4.png);}
+
+section.albums > .albums-wrap > .tray-wrap > .fifth > .album > .front { background: center / cover no-repeat url(../images/albumCover5.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .fifth > .album > .back {background: center / cover no-repeat url(../images/albumCover5.jpg);}
+section.albums > .albums-wrap > .tray-wrap > .fifth > .album > .paper {background: center / cover no-repeat url(../images/albumBack5.png);}
+section.albums > .albums-wrap > .tray-wrap > .fifth > .album > .paper >  .cd {background: center / 90% 90% no-repeat url(../images/albumCD5.png);}
+
+section.albums > .prev-btn {
+    width: 100px; height: 100px; position: absolute;
+    background: rgba(255, 255, 255, 0.1); border-radius: 50px;
+    left: 2%; top: 50%; transform: translate(0, -50%);
+    cursor: pointer;  z-index: 9999;
+    transition: 0.4s;
+}
+section.albums > .prev-btn > .arrow-top {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 48%; top: 40%; transform: translate(-50%, -50%) rotate(-45deg);
+    transition: 0.4s; cursor: pointer;
+}
+section.albums > .prev-btn > .arrow-bottom {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 48%; top: 60%; transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.4s; cursor: pointer;
+}
+section.albums > .prev-btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+
+}
+section.albums > .prev-btn:hover > .arrow-top {
+    background: black;
+}
+section.albums > .prev-btn:hover > .arrow-bottom {
+    background: black;
+}
+section.albums > .next-btn {
+    width: 100px; height: 100px; position: absolute;
+    background: rgba(255, 255, 255, 0.1); border-radius: 50px;
+    right: 2%; top: 50%; transform: translate(0, -50%);
+    cursor: pointer; transition: 0.4s; z-index: 9999;
+}
+section.albums > .next-btn > .arrow-top {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 52%; top: 40%; cursor: pointer;
+    transform: translate(-50%, -50%) rotate(45deg); transition: 0.4s;
+}
+section.albums > .next-btn > .arrow-bottom {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 52%; top: 60%; cursor: pointer;
+    transform: translate(-50%, -50%) rotate(-45deg); transition: 0.4s;
+}
+section.albums > .next-btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+
+}
+section.albums > .next-btn:hover > .arrow-top {
+    background: black;
+}
+section.albums > .next-btn:hover > .arrow-bottom {
+    background: black;
+}
+/* 앨범오픈클래스입니다 해당 클래스가 추가되면 앨범의 뚜껑이 열리게됩니다 */
+section.albums > div.albums-wrap > div.tray-wrap > .tray > .album> .albumOpen {transform: rotateX(-90deg) rotateY(-110deg) translateZ(0px);}
+
+.rotateCD {
+    animation: rotateCD 0.8s linear infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes rotateCD{
+	100% {
+    	transform: rotate(360deg);
+    }
+}
+@keyframes clickPlay{
+	100% {
+    	opacity: 1;
+    }
+}
+/* 액티브 클래스 추가 */
+/* 액티브 클래스가 활성화되었을때 동작할 기능입니다. */
+/* visibility: hidden; opacity: 0;에서 visibility: visible; opacity: 1;로 변경하여 해당페이지가 보이도록합니다. */
+section.albums.active{
+    visibility: visible; opacity: 1;
+}
+section.albums.active > .albums-wrap {
+    width: 1480px; height:730px;  opacity: 1;
+    transition: 1.7s ease-in; transition-delay: 1s;
+}

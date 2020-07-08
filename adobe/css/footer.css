@@ -1,0 +1,28 @@
+footer {
+  width: 100vw;
+  height: 120px;
+  background: rgb(23, 23, 23);
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.footer_wrap {
+  margin: 0 auto;
+  width: 1120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer_wrap ul {
+  display: flex;
+  align-items: center;
+}
+.footer_wrap ul li {
+  margin-right: 15px;
+}
+.footer_wrap ul img {
+  width: 40px;
+}
+.footer_wrap .f_con {
+  font-size: 12px;
+}

@@ -1,0 +1,98 @@
+/* 모든 페이지를 fixed로 고정하여 화면의 한곳에 배치하였습니다 그 후 visibility를 hidden으로 두어 가린 후 active클래스가 더해지면 보이도록 했습니다. */
+section.video {
+    position: fixed; width: 100%; height: 100%; top: 0; left: 0; 
+    visibility: hidden; opacity: 0; transition: 0.5s;}
+section.video > .video-wrap {
+    position: absolute; width: 1480px; height: 100vh; left: 50%; top: 50%; 
+    transform: translate(-50%, -50%); transition: 0.5s;}
+
+    /* 비디오를 마스킹하는 부분입니다 clip-path를 사용하여 타원모양을 만들었습니다. */
+    /* width의 초기값을 0으로 잡고 active클래스가 더해지면 배경의 원과 같이 넓어집니다. */
+section.video > .video-wrap > .video-mask{
+    position: absolute;
+    width: 0px; 
+    height: 2980px;
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+    clip-path: ellipse(22.4% 50% at 50% 50%);
+    overflow: hidden; transition: 0.5s;
+}
+section.video > .video-wrap > .video-mask > .box-wrap {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 1440px; height: 100vh; transition: 0.3s ease-in-out;
+}
+section.video > .video-wrap > .video-mask > .box-wrap > div {
+    width: 720px; height: 405px;
+    position: absolute; top: 50%; transform: translate(-50%, -50%);
+    background: rgb(108, 108, 108);
+}
+section.video > .video-wrap > .video-mask > .box-wrap > div.video-box1 {left: 50%; }
+section.video > .video-wrap > .video-mask > .box-wrap > div.video-box2 {left: 107%; }
+section.video > .video-wrap > .video-mask > .box-wrap > div.video-box3 {left: 164%; }
+section.video > .video-wrap > .video-mask > .box-wrap > div > p {
+    position: absolute; left: 50%; bottom: -12%; transform: translate(-50%, -50%);
+    font-size: 22px; color: rgba(255, 255, 255, 0.7);
+}
+section.video > .prev-btn {
+    width: 80px; height: 80px; position: absolute;
+    background: rgba(255, 255, 255, 0.1); border-radius: 40px;
+    left: 28%; top: 85%; transform: translate(0, -50%);
+    cursor: pointer; transition: 0.4s; z-index: 9999;
+}
+section.video > .prev-btn > .arrow-top {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 48%; top: 37%; 
+    transform: translate(-50%, -50%) rotate(-45deg); transition: 0.4s;
+}
+section.video > .prev-btn > .arrow-bottom {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 48%; top: 63%; 
+    transform: translate(-50%, -50%) rotate(45deg); transition: 0.4s;
+}
+section.video > .prev-btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+
+}
+section.video > .prev-btn:hover > .arrow-top {
+    background: black;
+}
+section.video > .prev-btn:hover > .arrow-bottom {
+    background: black;
+}
+section.video > .next-btn {
+    width: 80px; height: 80px; position: absolute;
+    background: rgba(255, 255, 255, 0.1); border-radius: 40px;
+    right: 28%; top: 85%; transform: translate(0, -50%);
+    cursor: pointer; transition: 0.4s;  z-index: 9999;
+}
+section.video > .next-btn > .arrow-top {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 52%; top: 37%; 
+    transform: translate(-50%, -50%) rotate(45deg); transition: 0.4s;
+}
+section.video > .next-btn > .arrow-bottom {
+    width: 30px; height: 2px; position: absolute;
+    background: white; left: 52%; top: 63%; 
+    transform: translate(-50%, -50%) rotate(-45deg); transition: 0.4s;
+}
+section.video > .next-btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+
+}
+section.video > .next-btn:hover > .arrow-top {
+    background: black;
+}
+section.video > .next-btn:hover > .arrow-bottom {
+    background: black;
+}
+/* 액티브 활성화 */
+/* 액티브 클래스가 활성화되었을때 동작할 기능입니다. */
+/* visibility: hidden; opacity: 0;에서 visibility: visible; opacity: 1;로 변경하여 해당페이지가 보이도록합니다. */
+section.video.active {position: fixed; top: 0; left: 0; visibility: visible; opacity: 1;}
+section.video.active > .video-wrap > .video-mask{
+    position: absolute;
+    width: 2630px; 
+    height: 2980px;
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+    clip-path: ellipse(22.4% 50% at 50% 50%);
+    overflow: hidden; transition: 1.5s ease-in; transition-delay: 1s;
+}
